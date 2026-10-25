@@ -1,0 +1,33 @@
+name: build-kext
+
+on:
+  push:
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: macos-15-intel   # Intel (x86_64) runner; macos-13 was retired
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Show toolchain
+        run: |
+          xcodebuild -version
+          xcrun --sdk macosx --show-sdk-path
+          ls "$(xcrun --sdk macosx --show-sdk-path)/System/Library/Frameworks/Kernel.framework/Headers" | head
+
+      - name: Build kext
+        run: make
+
+      - name: Inspect result
+        run: |
+          plutil -lint build/RTL8723BE.kext/Contents/Info.plist
+          otool -l build/RTL8723BE.kext/Contents/MacOS/RTL8723BE | grep -A4 LC_BUILD_VERSION || true
+
+      - name: Package dmg
+        run: make dmg
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: RTL8723BE
+          path: build/RTL8723BE.dmg
