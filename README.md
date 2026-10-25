@@ -6,7 +6,7 @@ RTL8723BE-macOS-WiFi (Backported) aims to bring Realtek RTL8723BE PCIe wireless 
 
 Based on the original Ventura-and-newer project, this fork focuses on extending compatibility to Big Sur and Monterey while aiming to maintain support for Ventura, Sonoma, Sequoia, and subsequent releases.
 
-Original upstream: AA-EION/RTL8723BE-macOS-WiFi
+**Upstream Source:** [AA-EION/RTL8723BE-macOS-WiFi](https://github.com/AA-EION/RTL8723BE-macOS-WiFi)
 
 This backport: superjhay29/RTL8723BE-macOS-WiFi
 
