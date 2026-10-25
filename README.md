@@ -59,21 +59,27 @@ Restart macOS and check System Settings → Network for a Wi-Fi interface.
 
 If the adapter is not detected, inspect the PCI device ID, OpenCore configuration, and system logs.
 
-##🛠️ Troubleshooting
+## 🛠️ Troubleshooting
 Problem	Suggested solution
+
 **Q: Adapter not detected**	
+
     **A: Verify PCI IDs, kext paths, and device matching rules.**
 
 **Q: Firmware loading failure**	
+
     **A: Check the required firmware files and compatibility.**
 
 **Q: Kernel panic**	
+
    **A: Boot from a known-good EFI backup and disable the kext.**
 
 **Q: Connected without internet	**
+
     **A: Check DHCP, IP assignment, and router configuration.**
 
 **Q: Wi-Fi breaks after updating macOS**
+
    **A:   Verify compatibility with the new macOS build.**
 
 When reporting issues, include your macOS version, OpenCore version, adapter device ID, driver revision, and relevant logs. Remove sensitive information before sharing.
