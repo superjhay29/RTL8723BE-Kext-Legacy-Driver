@@ -25,7 +25,9 @@ jobs:
           otool -l build/RTL8723BE.kext/Contents/MacOS/RTL8723BE | grep -A4 LC_BUILD_VERSION || true
 
       - name: Package dmg
-        run: make dmg
+        run: |
+          chmod +x scripts/make_dmg.sh
+          make dmg
 
       - uses: actions/upload-artifact@v4
         with:
