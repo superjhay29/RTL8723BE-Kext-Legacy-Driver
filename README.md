@@ -1,0 +1,1 @@
+# RTL8723BE-Kext-Legacy-Driver
