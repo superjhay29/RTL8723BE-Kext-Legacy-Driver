@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+  <key>CFBundleDevelopmentRegion</key><string>en</string>
+  <key>CFBundleExecutable</key><string>RTL8723BE</string>
+  <key>CFBundleIdentifier</key><string>com.example.RTL8723BE</string>
+  <key>CFBundleInfoDictionaryVersion</key><string>6.0</string>
+  <key>CFBundleName</key><string>RTL8723BE</string>
+  <key>CFBundlePackageType</key><string>KEXT</string>
+  <key>CFBundleShortVersionString</key><string>0.0.1</string>
+  <key>CFBundleVersion</key><string>0.0.1</string>
+  <key>IOKitPersonalities</key>
+  <dict>
+    <key>RTL8723BE</key>
+    <dict>
+      <key>CFBundleIdentifier</key><string>com.example.RTL8723BE</string>
+      <key>IOClass</key><string>RTL8723BE</string>
+      <key>IOProviderClass</key><string>IOPCIDevice</string>
+      <!-- 10EC:B723 = RTL8723BE. Verify against your card with lspci/ioreg. -->
+      <key>IOPCIMatch</key><string>0xb72310ec</string>
+      <key>IOMatchCategory</key><string>RTL8723BE</string>
+    </dict>
+  </dict>
+  <key>OSBundleLibraries</key>
+  <dict>
+    <key>com.apple.kpi.bsd</key><string>11.0</string>
+    <key>com.apple.kpi.iokit</key><string>11.0</string>
+    <key>com.apple.kpi.libkern</key><string>11.0</string>
+    <key>com.apple.kpi.mach</key><string>11.0</string>
+  </dict>
+  <key>OSBundleRequired</key><string>Root</string>
+</dict>
+</plist>
