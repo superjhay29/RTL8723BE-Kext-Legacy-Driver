@@ -57,5 +57,6 @@ Remove the `Kernel -> Add` entry and delete the kext from `EFI/OC/Kexts/`, then 
 
 ## Changelog
 
+- 0.0.3: add src/kmod_info.cpp (kernel logged "can't find prelinked kext kmod_info address").
 - 0.0.2: add `com.apple.iokit.IOPCIFamily` to `OSBundleLibraries` (0.0.1 failed to link:
   could not bind `IOPCIDevice::metaClass` and `extendedConfigRead16`).
