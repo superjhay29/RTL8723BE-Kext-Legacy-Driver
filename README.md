@@ -1,6 +1,7 @@
 # RTL8723BE-macOS-WiFi (Backported) 🚀
 A Realtek RTL8723BE PCIe Wi-Fi driver backport targeting macOS Big Sur and newer, with OpenCore integration.
-📌 Overview
+
+## 📌 Overview
 
 RTL8723BE-macOS-WiFi (Backported) aims to bring Realtek RTL8723BE PCIe wireless adapter support to macOS Big Sur (11.0) and newer releases.
 
@@ -97,7 +98,7 @@ Backport repository: https://github.com/superjhay29/RTL8723BE-macOS-WiFi
 
 Contributions, testing, and reproducible bug reports are welcome.
 
-📄 License & Disclaimer
+## 📄 License & Disclaimer
 
 Refer to the repository's LICENSE file and the upstream license terms. Preserve all applicable copyright notices and attribution.
 
