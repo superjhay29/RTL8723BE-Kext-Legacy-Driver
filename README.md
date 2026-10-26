@@ -22,7 +22,7 @@ Community Development: Encourages compatibility testing, bug reports, and contri
 
 Note: Actual functionality depends on the driver build, adapter revision, and macOS version. WPA3, Bluetooth, and advanced continuity features are not guaranteed.
 
-##📋 System Requirements
+## 📋 System Requirements
 OS: macOS Big Sur (11.x), Monterey (12.x), Ventura (13.x), Sonoma (14.x), or Sequoia (15.x), subject to testing.
 Hardware: Realtek RTL8723BE PCIe Wi-Fi adapter.
 Bootloader: OpenCore.
