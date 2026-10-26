@@ -8,8 +8,8 @@
   <key>CFBundleInfoDictionaryVersion</key><string>6.0</string>
   <key>CFBundleName</key><string>RTL8723BE</string>
   <key>CFBundlePackageType</key><string>KEXT</string>
-  <key>CFBundleShortVersionString</key><string>0.0.1</string>
-  <key>CFBundleVersion</key><string>0.0.1</string>
+  <key>CFBundleShortVersionString</key><string>0.0.2</string>
+  <key>CFBundleVersion</key><string>0.0.2</string>
   <key>IOKitPersonalities</key>
   <dict>
     <key>RTL8723BE</key>
@@ -17,13 +17,16 @@
       <key>CFBundleIdentifier</key><string>com.example.RTL8723BE</string>
       <key>IOClass</key><string>RTL8723BE</string>
       <key>IOProviderClass</key><string>IOPCIDevice</string>
-      <!-- 10EC:B723 = RTL8723BE. Verify against your card with lspci/ioreg. -->
+      <!-- 10EC:B723 = RTL8723BE (confirmed on the author's card via ioreg). -->
       <key>IOPCIMatch</key><string>0xb72310ec</string>
       <key>IOMatchCategory</key><string>RTL8723BE</string>
     </dict>
   </dict>
   <key>OSBundleLibraries</key>
   <dict>
+    <!-- IOPCIDevice lives in IOPCIFamily, not in the generic kpi.iokit.
+         Missing this caused: Failed to bind IOPCIDevice::metaClass / extendedConfigRead16 -->
+    <key>com.apple.iokit.IOPCIFamily</key><string>2.9</string>
     <key>com.apple.kpi.bsd</key><string>11.0</string>
     <key>com.apple.kpi.iokit</key><string>11.0</string>
     <key>com.apple.kpi.libkern</key><string>11.0</string>

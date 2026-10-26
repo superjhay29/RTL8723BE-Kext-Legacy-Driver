@@ -1,5 +1,5 @@
 # Command-line kext build (no Xcode GUI). Runs on macOS only.
-# UNTESTED: first CI run will likely need tweaks to flags / kmod info.
+# Builds x86_64 for macOS 11.0 and later.
 KEXT      := RTL8723BE
 BUNDLE_ID := com.example.RTL8723BE
 SDK       := $(shell xcrun --sdk macosx --show-sdk-path)
@@ -36,7 +36,9 @@ $(OUT): $(OBJS) Info.plist
 	codesign --force --sign - $(OUT) || true
 
 dmg: $(OUT)
-	scripts/make_dmg.sh $(OUT)
+	bash scripts/make_dmg.sh $(OUT)
 
 clean:
 	rm -rf $(BUILD)
+
+.PHONY: all dmg clean
