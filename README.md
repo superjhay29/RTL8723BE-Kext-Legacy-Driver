@@ -1,7 +1,7 @@
 # RTL8723BE macOS kext (work in progress)
 
-Status: **Phase 1 skeleton.** The driver attaches to PCI `10EC:B723`, enables the
-device and maps BAR2. It does **not** provide Wi-Fi yet. Untested beyond the
+Status: **Phase 2 (read-only register access).** Attaches to PCI `10EC:B723`, maps BAR2 and logs a
+register dump. It does **not** provide Wi-Fi yet. Untested beyond the
 checks below.
 
 Target: Intel Hackintosh (OpenCore), macOS 11 Big Sur and later (developed on 12.7.6 Monterey).
@@ -57,6 +57,7 @@ Remove the `Kernel -> Add` entry and delete the kext from `EFI/OC/Kexts/`, then 
 
 ## Changelog
 
+- 0.0.4: read-only register dump in start() (PCI command reg + 8 chip registers), logged as "RTL8723BE: reg ...". No writes to the chip.
 - 0.0.3: add src/kmod_info.cpp (kernel logged "can't find prelinked kext kmod_info address").
 - 0.0.2: add `com.apple.iokit.IOPCIFamily` to `OSBundleLibraries` (0.0.1 failed to link:
   could not bind `IOPCIDevice::metaClass` and `extendedConfigRead16`).
